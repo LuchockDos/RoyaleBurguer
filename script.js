@@ -51,6 +51,10 @@ function renderProductos() {
       const desc = document.createElement('p');
       desc.classList.add('info_product');
       desc.textContent = producto.descripcion;
+      
+      const precio = document.createElement('span')
+      precio.classList.add('info_product')
+      precio.textContent = `$${producto.precio}`
 
       // BOTÓN AGREGAR DIRECTO
       const btn = document.createElement('button');
@@ -58,7 +62,7 @@ function renderProductos() {
       btn.textContent = "Agregar";
       btn.addEventListener("click", () => agregarAlCarrito(producto));
 
-      card.append(img, h3, desc, btn);
+      card.append(img, h3,precio, desc, btn);
       article.appendChild(card);
     });
 

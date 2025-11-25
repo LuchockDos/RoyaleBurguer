@@ -14,11 +14,11 @@ html {
 }
 .cart_icon {
   font-size: 28px;
-  color: #c5a253;
+  color: white;
   cursor: pointer;
 }
 .cart_badge {
-  color: #c5a253;
+  color: white;
   font-size: 15px;
 }
 .h1_global {
@@ -27,7 +27,7 @@ html {
   margin: 20px 0;
 }
 .h2_global {
-  color: #c5a253;
+  color: white;
   font-size: 25px;
 }
 
@@ -41,11 +41,10 @@ html {
   padding: 0 40px;
   position: fixed;
   z-index: 100;
-  background-color: black;
+  background-color: rgb(169, 31, 31);
 }
 .navigation {
   width: 100%;
-  line-height: 75px;
   display: flex;
   justify-content: center;
 }
@@ -69,113 +68,18 @@ html {
 .main_container {
   width: 100%;
   height: auto;
-  display: grid;
-  place-items: center;
-  background-color: rgb(37, 37, 37);
+  display: flex;
+  padding: 50px;
+  flex-direction: column;
+  background-color: black;
 }
 
 /*Info ViEmma*/
-.article_info_viemma {
-  width: 100%;
-  height: auto;
-  min-height: 100vh;
-  margin-top: 50px;
-  display: grid;
-  place-items: center;
-  background: linear-gradient(180deg, #0a0a0a 0%, #1c1c1c 50%, #c5a253 100%);
-}
-.logo_title {
-  display: grid;
-  gap: 10px;
-  place-items: center;
-  margin-top: 50px;
-}
-.logo {
-  width: 200px;
-}
-.info_container {
-  height: 100%;
-  display: flex;
-  text-align: center;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
-}
-.schedule {
-  font-size: 20px;
-  color: white;
-}
-.shipping {
-  width: 90%;
-  padding: 20px;
-  border-radius: 10px;
-  display: flex;
-  justify-content: space-between;
-  background-color: #c5a253;
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out;
-}
-.shipping:hover {
-  transform: translatey(-5px);
-}
-.envio {
-  font-size: 18px;
-}
-.money {
-  padding: 10px;
-  border-radius: 10px;
-  color: #c5a253;
-  background-color: black;
-}
-.instagram {
-  width: 140px;
-  border-radius: 10px;
-  padding: 10px;
-  display: flex;
-  cursor: pointer;
-  justify-content: space-between;
-  align-items: center;
-  transition: transform 0.3s ease-in-out;
-  background: linear-gradient(45deg, #f58529, #dd2a7b, #8134af, #515bd4);
-}
-.instagram:hover {
-  transform: translatey(-5px);
-}
-.logo_instagram {
-  font-size: 25px;
-  color: white;
-}
-.ig {
-  font-size: 18px;
-  color: white;
-}
-.zona_aviso {
-  text-align: center;
-  background-color: #c5a253;
-  color: black;
-  font-weight: 700;
-  padding: 10px;
-  border-radius: 8px;
-  width: 92%;
-  max-width: 800px;
-  margin: 15px auto;
-}
 
-/* Contenedor del mapa */
-.zona_mapa_container {
-  display: flex;
-  justify-content: center;
-  margin: 10px auto 25px auto;
-  width: 92%;
-  max-width: 800px;
-}
-
-/* Mapa responsive */
-.zona_mapa_container iframe {
-  width: 100%;
-  height: 300px;
-  border-radius: 12px;
-  border: 3px solid #c5a253;
+.logo_nav
+{
+  width: 100px;
+  height: 75px;
 }
 /**/
 .section_products {
@@ -193,41 +97,40 @@ html {
 }
 
 .card {
-  background-color: #302f2f;
+  display: grid;
+  grid-template-rows: 200px 1fr;
+  place-items: center;
   border-radius: 12px;
-  background-size: cover;
-  background-position: center;
+  background-position: cover;
   overflow: hidden;
   text-align: center;
-  transition: transform 0.3s ease-in-out;
-}
-
-.card:hover {
-  transform: scale(1.05);
+    box-shadow:
+        0 0 8px rgba(255, 255, 255, 0.05),      /* glow exterior */
+        inset 0 0 6px rgba(255, 255, 255, 0.03); /* brillo interior */
 }
 
 .product {
   width: 100%;
-  height: 200px;
+  height: auto;
 }
 
 .h3_global {
-  color: #c5a253;
+  color: white;
   padding: 10px;
   font-size: 18px;
 }
 .info_product {
   text-align: center;
   padding: 10px;
-  color: #c5a253;
+  color: white;
 }
 .price {
   padding: 10px;
-  color: #c5a253;
+  color: white;
 }
 
 .btn_add_cart {
-  background-color: black;
+  background-color: red;
   color: #c5a253;
   border: none;
   border-radius: 6px;
@@ -301,59 +204,6 @@ html {
   overflow: hidden;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
   position: relative;
-}
-
-.modal_left {
-  width: 80%;
-  border-radius: 20px 0 0 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.modal_img {
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
-.modal_right {
-  width: 50%;
-  display: flex;
-  overflow-y: auto;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  padding: 15px;
-  gap: 10px;
-}
-
-.modal_title {
-  margin: 10px 0;
-  font-size: 20px;
-  text-align: center;
-  color: #c5a253;
-}
-
-.modal_prices {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 100%;
-}
-
-.modal_label {
-  justify-content: space-between;
-  font-size: 14px;
-  color: #fff;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 4px 0;
-}
-
-.modal_label input[type="radio"] {
-  accent-color: #c5a253;
-  transform: scale(1.1);
-  margin-right: 6px;
 }
 
 .details {
@@ -508,15 +358,6 @@ html {
   width: 16px;
   height: 16px;
 }
-.verificar_zona {
-  display: flex;
-  font-size: 15px;
-  flex-direction: column;
-  gap: 5px;
-}
-.verify {
-  color: #c5a253;
-}
 
 .modal_total {
   font-size: 18px;
@@ -618,21 +459,8 @@ html {
     max-height: 90vh;
     overflow: auto;
   }
-
-  .modal_left,
-  .modal_right {
-    width: 100%;
-    border-radius: 0;
-    overflow: auto;
-  }
-  
-  .modal_left {
-    padding: 0;
-    height: auto;
-    background-size: contain;
-  }
-
-  .modal_img {
+  .modal_img 
+  {
     width: 100%;
     object-fit: cover;
     object-position: center;
@@ -724,10 +552,5 @@ html {
   }
   .money {
     font-size: 14px;
-  }
-}
-@media (max-width: 450px) {
-  .zona_mapa_container iframe {
-    height: 230px;
   }
 }
