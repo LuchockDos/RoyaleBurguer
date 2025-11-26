@@ -78,8 +78,8 @@ html {
 
 .logo_nav
 {
-  width: 100px;
-  height: 75px;
+  width: 300px;
+  height: auto;
 }
 /**/
 .section_products {
@@ -98,10 +98,9 @@ html {
 
 .card {
   display: grid;
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 210px 50px 50px 1fr;
   place-items: center;
   border-radius: 12px;
-  background-position: cover;
   overflow: hidden;
   text-align: center;
   box-shadow: 0px 4px 12px rgba(141, 141, 141, 0.18);
@@ -114,26 +113,28 @@ html {
 
 .h3_global {
   color: white;
-  padding: 10px;
+  margin-top: 20px;
   font-size: 18px;
 }
 .info_product {
   text-align: center;
-  padding: 10px;
   color: white;
+  padding: 8px;
 }
+
 .price {
-  padding: 10px;
-  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  color: orange;
 }
 
 .btn_add_cart {
-  background-color: red;
-  color: #c5a253;
+  background-color: orange;
+  color: black;
   border: none;
   border-radius: 6px;
   padding: 10px;
-  margin-bottom: 20px;
+  margin: 20px;
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
@@ -142,19 +143,7 @@ html {
 .btn_add_cart:hover {
   transform: scale(1.1);
 }
-.btn_add_flavor{
-  background-color: black;
-  color: #c5a253;
-  border: none;
-  border-radius: 6px;
-  padding: 10px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s, transform 0.3s;
-}
-.btn_add_flavor:active{
-  transform: scale(1.1);
-}
+
 .container_footer {
   width: 100%;
   height: auto;
@@ -431,13 +420,22 @@ html {
   }
     .card
   {
-    grid-template-rows: 300px 1fr;
+    grid-template-rows: 300px 50px 50px 1fr;
   }
 }
 @media screen and (max-width: 768px) {
   .h1_global
   {
     font-size: 16px;
+  }
+  .price
+  {
+    font-size: 18px;
+  }
+  .card
+  {
+    grid-template-rows: 210px 50px 50px 1fr;
+    box-shadow: 0px 4px 12px rgb(59, 59, 59);
   }
   .modal_item_info {
     font-size: 10px;
@@ -512,14 +510,14 @@ html {
 
   .cart_icon {
     font-size: 28px;
-    color: #c5a253;
+    color: white;
   }
 
   .cart_badge {
     position: absolute;
     top: -5px;
     right: -8px;
-    color: #c5a253;
+    color: white;
     border-radius: 50%;
     font-size: 12px;
     font-weight: bold;
@@ -533,26 +531,29 @@ html {
     gap: 10px;
     grid-template-columns: repeat(2,1fr);
   }
-  .card
-  {
-    grid-template-rows: 200px 1fr;
-    box-shadow: 0px 4px 12px rgb(59, 59, 59);
-  }
-  
   .info_product
   {
     font-size: 10px;
+  }
+    .card
+  {
+    
+    grid-template-rows: 150px 50px 50px 1fr;
   }
   .btn_add_cart
   {
     font-size: 8px;
     padding: 5px;
   }
-  .logo {
-    width: 70%;
+  .logo_nav {
+    width: 150px;
   }
   .h2_global {
     font-size: 18px;
+  }
+  .h3_global
+  {
+    font-size: 13px;
   }
   .schedule {
     font-size: 14px;

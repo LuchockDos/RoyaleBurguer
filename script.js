@@ -53,7 +53,7 @@ function renderProductos() {
       desc.textContent = producto.descripcion;
       
       const precio = document.createElement('span')
-      precio.classList.add('info_product')
+      precio.classList.add('price')
       precio.textContent = `$${producto.precio}`
 
       // BOTÓN AGREGAR DIRECTO

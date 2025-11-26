@@ -1,31 +1,31 @@
 {
   "carta": [
     {
-      "categoria": "Hamburguesas Simples",
-      "productos": [
+      "categoria": "Hamburguesas Dobles con Papas",
+      "productos":[
         {
-          "nombre": "Queso Simple",
-          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale.",
-          "precio": 4900,
-          "imagen": "assets/quesoSimple.webp"
-        }, 
-        {
-          "nombre": "Típica Simple",
-          "descripcion": "Bife de 110 gr, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale.",
-          "precio": 5400,
-          "imagen": "assets/tipicaSimple.webp"
+          "nombre": "Queso Doble con Papas",
+          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
+          "precio": 8500,
+          "imagen": "assets/quesoDobleyPapas.webp"
         },
         {
-          "nombre": "Royale Simple",
-          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla brunoise, panceta ahumada, salsa royale.",
-          "precio": 5900,
-          "imagen": "assets/royaleSimple.webp"
+          "nombre": "Típica Doble con Papas",
+          "descripcion": "Bife de 110 gr x2, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale + Papas fritas.",
+          "precio": 9000,
+          "imagen": "assets/tipicaDoblePapas.webp"
         },
         {
-          "nombre": "Wallace Simple",
-          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale.",
-          "precio": 6100,
-          "imagen": "assets/wallaceSimple.webp"
+          "nombre": "Royale Doble con Papas",
+          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla brunoise, panceta ahumada, salsa royale + Papas fritas.",
+          "precio": 9500,
+          "imagen": "assets/royaleDoblePapas.webp"
+        },
+         {
+          "nombre": "Wallace Doble con Papas",
+          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
+          "precio": 9700,
+          "imagen": "assets/wallaceDoblePapas.webp"
         }
       ]
     },
@@ -33,7 +33,7 @@
       "categoria": "Hamburguesas Simples con Papas",
       "productos": [
         {
-          "nombre": "Queso simple y papas",
+          "nombre": "Queso Simple con Papas",
           "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
           "imagen": "assets/quesoSimplePapas.webp",
           "precio": 6300
@@ -59,8 +59,7 @@
         }
       ]
     },
-
-    {
+     {
       "categoria": "Hamburguesas Dobles",
       "productos": [
         {
@@ -90,34 +89,34 @@
       ]
     },
     {
-      "categoria": "Hamburguesas Dobles con Papas",
-      "productos":[
+      "categoria": "Hamburguesas Simples",
+      "productos": [
         {
-          "nombre": "Queso Doble con Papas",
-          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
-          "precio": 8500,
-          "imagen": "assets/quesoDobleyPapas.webp"
+          "nombre": "Queso Simple",
+          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale.",
+          "precio": 4900,
+          "imagen": "assets/quesoSimple.webp"
+        }, 
+        {
+          "nombre": "Típica Simple",
+          "descripcion": "Bife de 110 gr, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale.",
+          "precio": 5400,
+          "imagen": "assets/tipicaSimple.webp"
         },
         {
-          "nombre": "Típica Doble con Papas",
-          "descripcion": "Bife de 110 gr x2, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale + Papas fritas.",
-          "precio": 9000,
-          "imagen": "assets/tipicaDoblePapas.webp"
+          "nombre": "Royale Simple",
+          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla brunoise, panceta ahumada, salsa royale.",
+          "precio": 5900,
+          "imagen": "assets/royaleSimple.webp"
         },
         {
-          "nombre": "Royale Doble con Papas",
-          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla brunoise, panceta ahumada, salsa royale + Papas fritas.",
-          "precio": 9500,
-          "imagen": "assets/royaleDoblePapas.webp"
-        },
-         {
-          "nombre": "Wallace Doble con Papas",
-          "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
-          "precio": 9700,
-          "imagen": "assets/wallaceDoblePapas.webp"
+          "nombre": "Wallace Simple",
+          "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale.",
+          "precio": 6100,
+          "imagen": "assets/wallaceSimple.webp"
         }
       ]
-    },
+    }, 
     {
       "categoria": "Hamburguesa Triple",
       "productos":[
