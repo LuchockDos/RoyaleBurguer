@@ -25,6 +25,7 @@ html {
   color: #c5a253;
   padding: 20px;
   margin: 20px 0;
+  text-align: center;
 }
 .h2_global {
   color: white;
@@ -140,7 +141,6 @@ html {
   cursor: pointer;
   transition: background-color 0.3s, transform 0.3s;
 }
-
 .btn_add_cart:hover {
   transform: scale(1.1);
 }
@@ -221,12 +221,15 @@ html {
 {
   display: flex;
   gap: 15px;
-  align-items: center;
 }
 .radio_salsa
 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   font-size: 13px;
   color: white;
+  
 }
 /**/
 .modal_close {

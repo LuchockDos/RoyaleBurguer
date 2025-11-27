@@ -1,7 +1,7 @@
 {
   "carta": [
     {
-      "categoria": "Hamburguesas Dobles.\n con Papas",
+      "categoria": "Hamburguesas Dobles con Papas",
       "productos":[
         {
           "nombre": "Queso Doble.\ncon Papas",
@@ -30,7 +30,7 @@
       ]
     },
     {
-      "categoria": "Hamburguesas Simples.\n con Papas",
+      "categoria": "Hamburguesas Simples con Papas",
       "productos": [
         {
           "nombre": "Queso Simple.\ncon Papas",

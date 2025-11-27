@@ -29,8 +29,7 @@ function renderProductos() {
     // TÍTULO DE CATEGORÍA
     const titulo = document.createElement('h1');
     titulo.classList.add('h1_global');
-    titulo.innerHTML = categoria.replace(/\n/g, "<br>");
-
+    titulo.textContent = categoria;
     section.appendChild(titulo);
 
     const article = document.createElement('article');
