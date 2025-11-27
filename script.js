@@ -26,10 +26,11 @@ function renderProductos() {
     const categoria = categoriaObj.categoria;
     const productos = categoriaObj.productos;
 
-    // TITULO DE CATEGORIA
+    // TÍTULO DE CATEGORÍA
     const titulo = document.createElement('h1');
     titulo.classList.add('h1_global');
-    titulo.textContent = categoria;
+    titulo.innerHTML = categoria.replace(/\n/g, "<br>");
+
     section.appendChild(titulo);
 
     const article = document.createElement('article');
@@ -46,23 +47,77 @@ function renderProductos() {
 
       const h3 = document.createElement('h3');
       h3.classList.add('h3_global');
-      h3.textContent = producto.nombre;
+      h3.innerHTML = producto.nombre.replace(/\n/g, "<br>");
+
+      const precio = document.createElement('span');
+      precio.classList.add('price');
+      precio.textContent = `$${producto.precio}`;
 
       const desc = document.createElement('p');
       desc.classList.add('info_product');
       desc.textContent = producto.descripcion;
-      
-      const precio = document.createElement('span')
-      precio.classList.add('price')
-      precio.textContent = `$${producto.precio}`
 
-      // BOTÓN AGREGAR DIRECTO
+      // FORM OPCIONES SOLO PARA NUGGETS
+      let formSalsas = null;
+
+      if (
+        categoria === "Nuggets & Papas" &&
+        producto.nombre.includes("Nuggets")
+      ) {
+        formSalsas = document.createElement("div");
+        formSalsas.classList.add("form_salsas");
+
+        const label = document.createElement("p");
+        label.textContent = "Salsa a Elección";
+        label.classList.add("info_product");
+
+        const contenedorOpciones = document.createElement("div");
+        contenedorOpciones.classList.add("salsas_container");
+
+        const opciones = ["Barbacoa", "Ketchup", "Mayo"];
+
+        opciones.forEach(salsa => {
+          const wrap = document.createElement("label");
+          wrap.classList.add("radio_salsa");
+
+          const radio = document.createElement("input");
+          radio.type = "radio";
+          radio.name = `salsa_${producto.nombre}`;
+          radio.value = salsa;
+
+          const txt = document.createElement("span");
+          txt.textContent = salsa;
+
+          wrap.appendChild(radio);
+          wrap.appendChild(txt);
+          contenedorOpciones.appendChild(wrap);
+        });
+
+        formSalsas.append(label, contenedorOpciones);
+      }
+
+      // BOTÓN AGREGAR AL CARRITO
       const btn = document.createElement('button');
       btn.classList.add("btn_add_cart");
       btn.textContent = "Agregar";
-      btn.addEventListener("click", () => agregarAlCarrito(producto));
 
-      card.append(img, h3,precio, desc, btn);
+      btn.addEventListener("click", () => {
+        let salsaElegida = null;
+
+        if (formSalsas) {
+          const seleccionada = formSalsas.querySelector("input[type='radio']:checked");
+          salsaElegida = seleccionada ? seleccionada.value : "Sin especificar";
+        }
+
+        agregarAlCarrito({ ...producto, salsa: salsaElegida });
+      });
+
+      // ARMADO FINAL DE LA CARD
+      card.append(img, h3, precio, desc);
+
+      if (formSalsas) card.appendChild(formSalsas);
+
+      card.appendChild(btn);
       article.appendChild(card);
     });
 
@@ -76,18 +131,17 @@ function renderProductos() {
 function agregarAlCarrito(producto) {
   let precio = 0;
 
-  // Si tiene "precios" (simples, dobles, etc) => tomar el simple
   if (producto.precios) {
     precio = producto.precios.simple;
   } else {
-    // Si viene con "precio" directo
     precio = producto.precio || 0;
   }
 
   carrito.push({
     nombre: producto.nombre,
     precio,
-    cantidad: 1
+    cantidad: 1,
+    salsa: producto.salsa || null
   });
 
   actualizarCarrito();
@@ -125,7 +179,9 @@ function actualizarCarrito() {
   carrito.forEach((prod, index) => {
     const div = document.createElement("div");
     div.innerHTML = `
-      ${prod.nombre} — $${prod.precio}
+      ${prod.nombre} 
+      ${prod.salsa ? `— Salsa: ${prod.salsa}` : ""}
+      — $${prod.precio}
       <button class="btn_quitar_producto" onclick="eliminarProducto(${index})">❌</button>
     `;
     carritoItems.appendChild(div);
@@ -137,7 +193,9 @@ function actualizarCarrito() {
   actualizarBadge();
 }
 
-// ELIMINAR UN PRODUCTO
+// ===============================
+//  ELIMINAR PRODUCTO
+// ===============================
 function eliminarProducto(index) {
   carrito.splice(index, 1);
   actualizarCarrito();
@@ -172,10 +230,12 @@ if (btnFinalizar) {
     let mensaje = "*Nuevo Pedido*\n\n";
 
     carrito.forEach(i => {
-      mensaje += `• ${i.nombre} — $${i.precio}\n`;
+      mensaje += `• ${i.nombre}`;
+      if (i.salsa) mensaje += ` — Salsa: ${i.salsa}`;
+      mensaje += ` — $${i.precio}\n`;
     });
 
-    mensaje += `Dirección: ${direccion}\n`;
+    mensaje += `\nDirección: ${direccion}\n`;
     mensaje += `El costo del envío depende de la ubicación\n`;
     mensaje += `Pago: ${metodoPago}\n`;
     mensaje += `\nTotal: $${totalPrecio} + Envío`;
