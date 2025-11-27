@@ -4,25 +4,25 @@
       "categoria": "Hamburguesas Dobles con Papas",
       "productos":[
         {
-          "nombre": "Queso Doble.\ncon Papas",
+          "nombre": "Queso Doble\ncon Papas",
           "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
           "precio": 8500,
           "imagen": "assets/quesoDobleyPapas.webp"
         },
         {
-          "nombre": "Típica Doble.\ncon Papas",
+          "nombre": "Típica Doble\ncon Papas",
           "descripcion": "Bife de 110 gr x2, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale + Papas fritas.",
           "precio": 9000,
           "imagen": "assets/tipicaDoblePapas.webp"
         },
         {
-          "nombre": "Royale Doble.\ncon Papas",
+          "nombre": "Royale Doble\ncon Papas",
           "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, cebolla brunoise, panceta ahumada, salsa royale + Papas fritas.",
           "precio": 9500,
           "imagen": "assets/royaleDoblePapas.webp"
         },
          {
-          "nombre": "Wallace Doble.\ncon Papas",
+          "nombre": "Wallace Doble\ncon Papas",
           "descripcion": "Bife de 110 gr x2, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
           "precio": 9700,
           "imagen": "assets/wallaceDoblePapas.webp"
@@ -33,13 +33,13 @@
       "categoria": "Hamburguesas Simples con Papas",
       "productos": [
         {
-          "nombre": "Queso Simple.\ncon Papas",
+          "nombre": "Queso Simple\ncon Papas",
           "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
           "imagen": "assets/quesoSimplePapas.webp",
           "precio": 6300
         },
         {
-          "nombre": "Típica Simple.\ncon Papas",
+          "nombre": "Típica Simple\ncon Papas",
           "descripcion": "Bife de 110 gr, queso danbo milkaut, pan de papa, tomate, lechuga, huevo, salsa royale + Papas fritas.",
           "imagen": "assets/típicaSimplePapas.webp",
           "precio": 6800
@@ -52,7 +52,7 @@
         },
         {
           "id": 113,
-          "nombre": "Wallace Simple.\ncon Papas",
+          "nombre": "Wallace Simple\ncon Papas",
           "descripcion": "Bife de 110 gr, cheddar milkaut, pan de papa, panceta ahumada, cebolla crispy o caramelizada, salsa royale + Papas fritas.",
           "precio": 7500,
           "imagen": "assets/wallaceSimplePapas.webp"
@@ -138,13 +138,13 @@
       "categoria": "Nuggets & Papas",
       "productos":[
         {
-          "nombre": "Nuggets de Pollo.\n(300 gr)",
+          "nombre": "Nuggets de Pollo\n(300 gr)",
           "descripcion": "Pollo rebozado con Maicena Aclarar salsa.",
           "precio": 7000,
           "imagen": "assets/pollofrito.webp"
         },
         {
-          "nombre": "Porción de Papas Fritas.\n(400 gr)",
+          "nombre": "Porción de Papas Fritas\n(400 gr)",
           "descripcion": "Papas cortadas Bastón Ketchup y Mayo de acompañamiento",
           "precio": 4500,
           "imagen": "assets/papas.webp"
